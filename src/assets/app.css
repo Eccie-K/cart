@@ -1,0 +1,30 @@
+@import '~bootstrap/css/bootstrap';
+@import './admin.css';
+
+body{
+    font-family: 'Nunito', sans-serif !important;
+}
+.custom-btn{
+     border-radius: 10rem;
+    padding: 0.5rem 2.5rem;
+}
+ hide scroll bar
+.sidebar-content {
+    -ms-overflow-style: none;  
+    overflow: -moz-scrollbars-none;  
+}
+.sidebar-content::-webkit-scrollbar { 
+    display: none;  
+}
+
+.intro{
+    margin-top: 3rem;
+}
+
+@media (min-width: 992px){
+
+    .modal-lg, .modal-xl {
+        max-width: 1200px;
+    }
+
+}
