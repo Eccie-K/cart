@@ -8,14 +8,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import  jQuery from 'jquery'
 import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChartLine, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faChartLine, faTimes, faPowerOff } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import firebase   from 'firebase'
 import VueFirestore from 'vue-firestore'
 require('firebase/firestore')
 
 
-library.add(faChartLine, faTimes)
+library.add(faChartLine, faTimes, faPowerOff)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('Navbar', require('./components/Navbar.vue').default);

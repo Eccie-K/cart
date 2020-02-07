@@ -75,8 +75,8 @@
                             </router-link>
                         </li>
                         <li>
-                            <a href="#" @click="logout()">
-                                <i class="fa fa-power-off"></i>
+                            <a href="/" @click="logout()">
+                                <font-awesome-icon  class="fa" icon="poweroff"/>
                                 <span>Logout</span>
                             </a>
                         </li>
@@ -101,7 +101,7 @@
 </template>
 
 <script>
-
+import {fb} from '../firebase'
 import $ from 'jquery'
 
 export default {
@@ -120,6 +120,21 @@ export default {
       }
     },
 
+    logout(){
+          fb.auth().signOut()
+          .then(() => {
+              this.$router.replace('/');
+          })
+          .catch((err) =>{
+              console.log(err);
+          });
+      },
+
+    created(){
+      let user = fb.auth().currentUser;
+      this.email = user.email;
+  }
+  
 }
 </script>
 
