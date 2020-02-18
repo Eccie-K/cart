@@ -13,6 +13,12 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import firebase   from 'firebase'
 import VueFirestore from 'vue-firestore'
 require('firebase/firestore')
+import VueSweetalert2 from 'vue-sweetalert2';
+
+
+window.Swal = require('sweetalert2') 
+
+
 
 
 library.add(faChartLine, faTimes, faPowerOff)
@@ -33,10 +39,13 @@ import Vue2Filters from 'vue2-filters'
 Vue.use(Vue2Filters)
 
 
+
+
+
 Vue.use(firebase)
 Vue.use(jQuery)
 Vue.use(BootstrapVue)
-
+Vue.use(VueSweetalert2);
 Vue.config.productionTip = false
 
 
